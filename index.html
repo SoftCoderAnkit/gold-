@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Calculator</title>
+<style>
+   .container {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  height: 100vh; /* Set the height to 100% of the viewport height */
+}
+
+.box {
+  width: 300px; /* Initial width of the box */
+  height: 400px; /* Initial height of the box */
+  background-color:#FFD700;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(180, 153, 0, 0.1); /* Add shadow for better visual effect */
+}
+
+input{
+  padding:7px;
+  
+}
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .box {
+    width: 80%; /* Set the width to 80% of the viewport width for smaller screens */
+    height: auto; /* Allow the height to adjust automatically */
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  
+  <div class="box">
+    <h1> Gold Rate </h1>
+    <p> please! only enter numbers</p>
+  <input type="number" id="gram" placeholder="weight in 0.000">
+  <input type="number" id="rate" placeholder="rate per 10 gram">
+  <input type="number" id="making" placeholder="% of making charges?">
+  <input type="number" id="tax" placeholder="% of Tax">
+  <button onclick="calculateProduct()">Calculate</button>
+  <h1 id="result">Total Prize: </h1>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
